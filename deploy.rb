@@ -1,5 +1,3 @@
-#!/usr/bin/ruby
-
 require 'aws-sdk'
 
 task_family = ARGV[0]
