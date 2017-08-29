@@ -14,7 +14,7 @@ current_task_def_descrip_resp = ecs.describe_task_definition({
 # create a new task definition identical to the existing one with a new auto-generates revision number and arn
 ecs.register_task_definition({
                                  family: task_family,
-                                 task_role_arn: current_task_def_descrip_resp.task_definition.task_role_arn rescue ""
+                                 task_role_arn: current_task_def_descrip_resp.task_definition.task_role_arn rescue "",
                                  container_definitions: [
                                      current_task_def_descrip_resp.task_definition.container_definitions[0]
                                  ],
